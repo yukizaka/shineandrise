@@ -65,7 +65,7 @@ shinyUI(fluidPage(
             ),
             numericInput("confi",
                          "Select Confidence",
-                         0.3,
+                         0.6,
                          min = 0,
                          max = 1,
             )
@@ -78,10 +78,67 @@ shinyUI(fluidPage(
                               tabPanel("Summary", verbatimTextOutput("sum")),
                               tabPanel("Apriori", verbatimTextOutput("apri")),
                               tabPanel("Frequent Item using eclat", DT::dataTableOutput("ec")),
-                              tabPanel("Absolute Frequency plot", plotOutput("plot.absolute")),
-                              tabPanel("Relative Frequency plot", plotOutput("plot.relative")),
+                              tabPanel("Frequency plot", 
+                                       box(status = 'primary', title = 'Filter for the frequency plot',
+                                           #'Asal Sekolah',
+                                           selectInput('cat', 'Categorical variables:', c('Jalur Masuk',  'Jenis Kelamin', 'Prodi', 'Lama Studi', 'IPK')),
+                                           footer = 'Frequency plot for categorical variables'),
+                                       
+                                       plotOutput("plot.freq")),
                               tabPanel("Top Ten Apriori Rules With Arrow plots",plotOutput("rules")),
-                              tabPanel("Grouped Metrixe Plot", plotOutput("group"))
+                              tabPanel("Parallel Coordinates Plot", plotOutput("group")),
+                              
+                              
+                              
+                              
+                              # tabPanel("Data Analysis",
+                              #          # 'dash',
+                              #         #Dashboard filters
+                              #             #title = 'Filters', 
+                              #             status = 'primary', width = 10,
+                              #             splitLayout(tags$head(tags$style(HTML(".shiny-split-layout > div {overflow: visible;}"))),
+                              #                         cellWidths = c('0%', '19%', '4%', '19%', '4%', '19%', '4%', '19%', '4%', '19%'),
+                              #                         selectInput('vb1', 'Variabel 1 :', c('Jalur Masuk',  'Jenis Kelamin', 'Prodi', 'Lama Studi', 'IPK')),
+                              #                         div(),
+                              #                         selectInput('vb2', 'Variabel 2 :', c('None', 'Jalur Masuk',  'Jenis Kelamin', 'Prodi', 'Lama Studi', 'IPK')),
+                              #                         div(),
+                              #                         selectInput('vb3', 'Variabel 3 :', c('None', 'Jalur Masuk',  'Jenis Kelamin', 'Prodi', 'Lama Studi', 'IPK')),
+                              #                         # div(),
+                              #                         # selectInput('as', 'Asal Sekolah', c('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')),
+                              #                         # div(),
+                              #                         # selectInput('jm', 'Jalur Masuk', c('SNMPTN', 'SBMPTN', 'SPMU')),
+                              #                         # div(),
+                              #                         # selectInput('prod', 'Program Studi', c('Informatika', 'Teknik Sipil', 'Teknik Elektro', 'Teknik Mesin'))),
+                              #                         # 
+                              #                         plotOutput("barPlot")
+                              #                       
+                              #                       ))
+                                    
+                                          # splitLayout(cellWidths = c('4%', '12%', '10%'),
+                                          #             div(),
+                                          
+                                          # fluidRow(column(4,
+                                          #                 selectInput(
+                                          #                     'LamaStudi',
+                                          #                     'LamaStudi:', 
+                                          #                     label = h4(""),
+                                          #                     multiple = TRUE,
+                                          #                     selected = c("SSR", "SR", "S"),
+                                          #                     selectize = TRUE,
+                                          #                     width = '400px'
+                                          #                 ))),
+                                          # 
+                                          # selectInput('LamaStudi', 'LamaStudi:', c('SSR', 'SR', 'S')),
+                                          # selectInput('regis', 'Registrations:', c('Total', 'New', 'Casual')),
+                                          # selectInput('weather', 'Weather choice:', c('All', 'Good', 'Fair', 'Bad', 'Very Bad'))),
+                                      #Boxes to display the plots
+                                    
+                              
+                              
+                              
+                              
+                              
+                              
                               
                               
                               
