@@ -129,7 +129,7 @@ shinyServer(function(input, output) {
         rules.pruned <- rules.sorted[!redundant]
         interdata <- inspect(rules.pruned)
         rules.pruned2 <- head(rules.pruned, n = 10, by="lift")
-        plot(rules.pruned, method = "paracoord")
+        plot(rules.pruned2, method = "paracoord")
         
     })
     

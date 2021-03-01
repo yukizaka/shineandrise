@@ -86,7 +86,7 @@ shinyUI(fluidPage(
                                        
                                        plotOutput("plot.freq")),
                               tabPanel("Top Ten Apriori Rules With Arrow plots",plotOutput("rules")),
-                              tabPanel("Parallel Coordinates Plot", plotOutput("group")),
+                              tabPanel("Parallel Coordinates Plot", plotOutput("group"))
                               
                               
                               

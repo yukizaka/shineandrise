@@ -1,6 +1,12 @@
 library(readxl)
+library(readr)
+library(dplyr)
+library(caret)
+library(caTools)
 cibi <- read.csv('C:/Users/Florecita/Documents/SKRIPSI/fixdataset_nv_edit.csv')
-summary(cibi)
+
+tly1 <- read.transactions('C:/Users/Florecita/Documents/SKRIPSI/fixdataset_nv_edit.csv', format = 'basket', sep=',')
+
 cibi$TID <- as.factor(cibi$TID)
 cibi$JenisKelamin <- factor(cibi$JenisKelamin, levels = c('L','P'))
 cibi$Ipk <- factor(cibi$Ipk, levels = c('B1','B2', 'B3'))
@@ -88,11 +94,6 @@ cibi$AsalSekolah <- factor(cibi$AsalSekolah, levels = c(
 
 
 
-
-bike$weekday <- factor(bike$weekday, levels = c('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'))
-bike$season <- factor(bike$season, levels = c('Spring', 'Summer', 'Fall', 'Winter'))
-
-
 cibi_id = cibi %>% select(TID, JenisKelamin) %>% group_by(TID) %>% distinct()
 head(cibi_id)
 cibi_id
@@ -122,11 +123,30 @@ top_sekolah
 top_10 = head(top_sekolah, 10)
 top_10
 
-best_sekolah = dataset[dataset$AsalSekolah == 'SMAN 2 KOTA BENGKULU',]
+best_sekolah = dataset[dataset$AsalSekolah == 'SMKN 2 KOTA BENGKULU',]
 head(best_sekolah)
-genderDist_aj = ggplot(data = best_sekolah) + geom_bar(mapping = aes(x = JenisKelamin, y = ..count.., fill = JenisKelamin)) + labs(title = 'Jenis Kelamin (Top Sekolah)') + scale_fill_brewer(palette = 'PuBuGn')
-
+genderDist_aj = ggplot(data = best_sekolah) + 
+  geom_bar(mapping = aes(x = Ipk, y = ..count.., fill = JenisKelamin)) + 
+  labs(title = 'Ipk dan Jenis Kelamin (SMKN 2 Kota Bengkulu)') +
+  scale_fill_brewer(palette = 'Paired') +
 print(genderDist_aj)
+
+cibi_jkjmls = cibi %>% select(Ipk, JenisKelamin, best_sekolah) %>% group_by(JenisKelamin) %>% count(Ipk, best_sekolah) %>% distinct()
+
+cibi_jkjmls2 = dataset %>% select(Ipk, JenisKelamin, best_sekolah) %>% group_by(JenisKelamin) %>% count(Ipk, best_sekolah) %>% distinct()
+
+genderbestsekolah = ggplot(data= best_sekolah, aes(fill=JenisKelamin, x=Ipk, y = ..count.., legend = TRUE )) + 
+  geom_bar(position="dodge", stat="identity") +
+  scale_fill_viridis(discrete = T, option = "E") +
+  scale_fill_brewer(palette = 'Paired') +
+  ggtitle("Ipk dan Jenis Kelamin pada SMKN 2 Kota Bengkulu") +
+  geom_text(hjust = 0.5, size = 4, position = position_dodge(width = .75), vjust = 2) +
+  facet_wrap(~JenisKelamin) +
+  theme_ipsum() +
+  theme(legend.position="bottom") +
+  xlab("")
+
+print(genderbestsekolah)
 
 cibi_jklama = cibi %>% select(JenisKelamin, LamaStudi) %>% group_by(LamaStudi) %>% count(JenisKelamin) %>% arrange(desc(JenisKelamin)) %>% distinct()
 cibi_jklama
@@ -209,7 +229,7 @@ genderDist_jkjmls= ggplot(data=cibi_jkjmls, aes(fill=JalurMasuk, x=LamaStudi, y 
 print(genderDist_jkjmls)
 
 
-
+cibi_prodiipk = cibi %>% select(Ipk, Prodi) %>% group_by(Prodi) %>% count(Ipk) %>% arrange(desc(Ipk)) %>% distinct()
 
 
 
