@@ -12,6 +12,10 @@ library(readxl)
 library(DT)
 library(arules)
 library(arulesViz)
+library(igraph)
+library(dplyr)
+
+
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
@@ -56,7 +60,7 @@ shinyServer(function(input, output) {
             sep = ",",
             rm.duplicates = T)
         
-        rules1 <- apriori(data1, parameter = list(support =as.numeric(input$supo), confidence = as.numeric(input$confi)))
+        rules1 <- apriori(data1, parameter = list(support =as.numeric(input$supo), confidence = as.numeric(input$confi), minlen=2))
         # interdata <- inspect(rules1)
         #find redundant rules
         rules.sorted = sort(rules1, by ="lift")
@@ -66,6 +70,7 @@ shinyServer(function(input, output) {
         
         #remove redundant rules
         rules.pruned <- rules.sorted[!redundant]
+        options(max.print=1000000)
         interdata <- inspect(rules.pruned)
         
         
@@ -94,7 +99,7 @@ shinyServer(function(input, output) {
             sep = ",",
             rm.duplicates = T)
         
-        rules1 <- apriori(data1, parameter = list(support =as.numeric(input$supo), confidence = as.numeric(input$confi)))
+        rules1 <- apriori(data1, parameter = list(support =as.numeric(input$supo), confidence = as.numeric(input$confi), minlen=2))
         # interdata <- inspect(rules1)
         #find redundant rules
         rules.sorted = sort(rules1, by ="lift")
@@ -104,8 +109,9 @@ shinyServer(function(input, output) {
         
         #remove redundant rules
         rules.pruned <- rules.sorted[!redundant]
-        interdata <- inspect(rules.pruned)
-        plot(rules.pruned[1:10], method = "graph")
+        top10subRules <- head(rules.pruned, n = 10, by = "confidence")
+        saveAsGraph(top10subRules, file="rules.graphml")
+        plot(top10subRules, method = "graph")
         
     })
     
@@ -117,7 +123,7 @@ shinyServer(function(input, output) {
             sep = ",",
             rm.duplicates = T)
         
-        rules1 <- apriori(data1, parameter = list(support =as.numeric(input$supo), confidence = as.numeric(input$confi)))
+        rules1 <- apriori(data1, parameter = list(support =as.numeric(input$supo), confidence = as.numeric(input$confi), minlen=2))
         # interdata <- inspect(rules1)
         #find redundant rules
         rules.sorted = sort(rules1, by ="lift")
@@ -128,8 +134,7 @@ shinyServer(function(input, output) {
         #remove redundant rules
         rules.pruned <- rules.sorted[!redundant]
         interdata <- inspect(rules.pruned)
-        rules.pruned2 <- head(rules.pruned, n = 10, by="lift")
-        plot(rules.pruned2, method = "paracoord")
+        plot(rules.pruned, method = "paracoord")
         
     })
     
@@ -285,3 +290,5 @@ shinyServer(function(input, output) {
     # })
     
 })
+
+

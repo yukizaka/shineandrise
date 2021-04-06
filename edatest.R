@@ -7,7 +7,7 @@ cibi <- read.csv('C:/Users/Florecita/Documents/SKRIPSI/fixdataset_nv_edit.csv')
 
 tly1 <- read.transactions('C:/Users/Florecita/Documents/SKRIPSI/fixdataset_nv_edit.csv', format = 'basket', sep=',')
 
-cibi$TID <- as.factor(cibi$TID)
+cibi$mhsNpm <- as.factor(cibi$mhsNpm)
 cibi$JenisKelamin <- factor(cibi$JenisKelamin, levels = c('L','P'))
 cibi$Ipk <- factor(cibi$Ipk, levels = c('B1','B2', 'B3'))
 cibi$LamaStudi <- factor(cibi$LamaStudi, levels = c('SSR', 'SR', 'S'))
@@ -94,7 +94,7 @@ cibi$AsalSekolah <- factor(cibi$AsalSekolah, levels = c(
 
 
 
-cibi_id = cibi %>% select(TID, JenisKelamin) %>% group_by(TID) %>% distinct()
+cibi_id = cibi %>% select(mhsNpm, JenisKelamin) %>% group_by(mhsNpm) %>% distinct()
 head(cibi_id)
 cibi_id
 summary(cibi_id$JenisKelamin)
@@ -123,7 +123,7 @@ top_sekolah
 top_10 = head(top_sekolah, 10)
 top_10
 
-best_sekolah = dataset[dataset$AsalSekolah == 'SMKN 2 KOTA BENGKULU',]
+best_sekolah = dataset[dataset$Prodi == 'SMKN 2 KOTA BENGKULU',]
 head(best_sekolah)
 genderDist_aj = ggplot(data = best_sekolah) + 
   geom_bar(mapping = aes(x = Ipk, y = ..count.., fill = JenisKelamin)) + 

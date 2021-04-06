@@ -24,8 +24,11 @@ library(ggplot2)
 library(plotly)
 
 
+
+
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
+    
     
     tags$h2(""),
     setBackgroundImage(
@@ -59,7 +62,7 @@ shinyUI(fluidPage(
             
             numericInput("supo",
                          "Select Support",
-                         0.05,
+                         0.01,
                          min = 0,
                          max = 1,
             ),
