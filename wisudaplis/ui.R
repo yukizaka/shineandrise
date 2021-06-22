@@ -32,7 +32,7 @@ shinyUI(fluidPage(
     
     tags$h2(""),
     setBackgroundImage(
-        src = "https://images.unsplash.com/photo-1610479368542-c037939ead16?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1576&q=80"
+        src = "https://cdn.pixabay.com/photo/2020/09/19/10/37/seascape-5584129_960_720.jpg"
     ),
     
     
@@ -62,7 +62,7 @@ shinyUI(fluidPage(
             
             numericInput("supo",
                          "Select Support",
-                         0.01,
+                         0.035,
                          min = 0,
                          max = 1,
             ),
@@ -71,7 +71,38 @@ shinyUI(fluidPage(
                          0.6,
                          min = 0,
                          max = 1,
-            )
+            ),
+            tags$strong("Kategori Atribut IPK "),
+            br(),
+            tags$strong("- P  : IPK ≥ 3,51 "),
+            br(),
+            tags$strong("- SM : 3,01 ≤ IPK ≤ 3,50"),
+            br(),
+            tags$strong("- M  : 2,76 ≤ IPK ≤ 3,00"),
+            br(),
+            tags$strong("- TP : 2,00 ≤ IPK ≤ 2,75"),
+            br(),
+            br(),
+            tags$strong("Kategori Atribut Lama Studi"),
+            br(),
+            tags$strong("- A  : Lama Studi ≤ 4 th"),
+            br(),
+            tags$strong("- B  : 4 th < Lama Studi ≤ 5 th"),
+            br(),
+            tags$strong("- C  : 5 th < Lama Studi ≤ 6 th"),
+            br(),
+            tags$strong("- D  : 6 th < Lama Studi ≤ 7 th "),
+            br(),
+            tags$strong("- E  : Lama Studi > 7 th "),
+            br(),
+            br(),
+            tags$strong("Kategori Atribut Asal Sekolah"),
+            br(),
+            tags$strong("- A1  : Kota Bengkulu"),
+            br(),
+            tags$strong("- A2  : Kabupaten Bengkulu"),
+            br(),
+            tags$strong("- A3  : Luar Provinsi Bengkulu"),
         ),
         
         # Show a plot of the generated distribution
@@ -84,12 +115,13 @@ shinyUI(fluidPage(
                               tabPanel("Frequency plot", 
                                        box(status = 'primary', title = 'Filter for the frequency plot',
                                            #'Asal Sekolah',
-                                           selectInput('cat', 'Categorical variables:', c('Jalur Masuk',  'Jenis Kelamin', 'Prodi', 'Lama Studi', 'IPK')),
+                                           selectInput('cat', 'Categorical variables:', c('Jalur Masuk',  'Jenis Kelamin', 'Prodi', 'Lama Studi', 'IPK','Asal Sekolah')),
                                            footer = 'Frequency plot for categorical variables'),
                                        
                                        plotOutput("plot.freq")),
                               tabPanel("Top Ten Apriori Rules With Arrow plots",plotOutput("rules")),
                               tabPanel("Parallel Coordinates Plot", plotOutput("group"))
+                                       
                               
                               
                               

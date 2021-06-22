@@ -147,8 +147,9 @@ shinyServer(function(input, output) {
                                 ifelse(input$cat == 'Jenis Kelamin', 'JenisKelamin',
                                        ifelse(input$cat == 'Prodi', 'Prodi',
                                               ifelse(input$cat == 'Lama Studi', 'LamaStudi',
-                                                     ifelse(input$cat == 'IPK', 'Ipk',
-                                                            )))))
+                                                     ifelse(input$cat == 'Asal Sekolah', 'AsalSekolah',
+                                                        ifelse(input$cat == 'IPK', 'Ipk',
+                                                                    ))))))
         
         #Frecuency plot
         fp = read.csv(input$gg$datapath, sep = ",")

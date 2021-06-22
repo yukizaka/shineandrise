@@ -4,12 +4,14 @@ library(dplyr)
 library(caret)
 library(caTools)
 
-cibs <- read.csv('C:/Users/Florecita/Documents/SKRIPSI/fixdatasetV2.csv')
-tly1 <- read.transactions('C:/Users/Florecita/Documents/SKRIPSI/fixdatasetV2.csv', format = 'basket', sep=',')
+cibs <- read.csv('C:/Users/Florecita/Documents/SKRIPSI/fixdatasetV5.csv')
+tly1 <- read.transactions('C:/Users/Florecita/Documents/SKRIPSI/fixdatasetV5.csv', format = 'basket', sep=',')
+tly1
 
-cibs$Id <- as.factor(cibs$Id)
+
+cibs$Id <- as.factor(cibs$id)
 cibs$JenisKelamin <- factor(cibs$JenisKelamin, levels = c('Lk','Pr'))
-cibs$Ipk <- character(cibs$Ipk, levels = c('P','SM', 'M', 'TP'))
+cibs$Ipk <- factor(cibs$Ipk, levels = c('P','SM', 'M', 'TP'))
 cibs$LamaStudi <- factor(cibs$LamaStudi, levels = c('A', 'B', 'C', 'D', 'E'))
 cibs$JalurMasuk <- factor(cibs$JalurMasuk, levels = c('SNMPTN', 'SBMPTN', 'SPMU'))
 cibs$Prodi <- factor(cibs$Prodi, levels = c('Informatika', 'Teknik Sipil', 'Teknik Elektro', 'Teknik Mesin'))

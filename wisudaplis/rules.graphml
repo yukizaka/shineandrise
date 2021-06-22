@@ -14,284 +14,244 @@
   <key id="v_order" for="node" attr.name="order" attr.type="double"/>
   <graph id="G" edgedefault="directed">
     <node id="n0">
-      <data key="v_name">784</data>
-      <data key="v_label">A</data>
-      <data key="v_count">-2147483648</data>
-      <data key="v_order">-2147483648</data>
-    </node>
-    <node id="n1">
-      <data key="v_name">785</data>
-      <data key="v_label">A1</data>
-      <data key="v_count">-2147483648</data>
-      <data key="v_order">-2147483648</data>
-    </node>
-    <node id="n2">
-      <data key="v_name">786</data>
+      <data key="v_name">491</data>
       <data key="v_label">A2</data>
       <data key="v_count">-2147483648</data>
       <data key="v_order">-2147483648</data>
     </node>
-    <node id="n3">
-      <data key="v_name">789</data>
+    <node id="n1">
+      <data key="v_name">494</data>
       <data key="v_label">B</data>
       <data key="v_count">-2147483648</data>
       <data key="v_order">-2147483648</data>
     </node>
-    <node id="n4">
-      <data key="v_name">790</data>
+    <node id="n2">
+      <data key="v_name">495</data>
       <data key="v_label">C</data>
       <data key="v_count">-2147483648</data>
       <data key="v_order">-2147483648</data>
     </node>
-    <node id="n5">
-      <data key="v_name">794</data>
-      <data key="v_label">Informatika</data>
+    <node id="n3">
+      <data key="v_name">497</data>
+      <data key="v_label">E</data>
       <data key="v_count">-2147483648</data>
       <data key="v_order">-2147483648</data>
     </node>
-    <node id="n6">
-      <data key="v_name">799</data>
+    <node id="n4">
+      <data key="v_name">504</data>
       <data key="v_label">Lk</data>
       <data key="v_count">-2147483648</data>
       <data key="v_order">-2147483648</data>
     </node>
-    <node id="n7">
-      <data key="v_name">801</data>
-      <data key="v_label">P</data>
+    <node id="n5">
+      <data key="v_name">505</data>
+      <data key="v_label">M</data>
       <data key="v_count">-2147483648</data>
       <data key="v_order">-2147483648</data>
     </node>
-    <node id="n8">
-      <data key="v_name">802</data>
-      <data key="v_label">Pr</data>
-      <data key="v_count">-2147483648</data>
-      <data key="v_order">-2147483648</data>
-    </node>
-    <node id="n9">
-      <data key="v_name">804</data>
+    <node id="n6">
+      <data key="v_name">509</data>
       <data key="v_label">SBMPTN</data>
       <data key="v_count">-2147483648</data>
       <data key="v_order">-2147483648</data>
     </node>
-    <node id="n10">
-      <data key="v_name">805</data>
+    <node id="n7">
+      <data key="v_name">510</data>
       <data key="v_label">SM</data>
       <data key="v_count">-2147483648</data>
       <data key="v_order">-2147483648</data>
     </node>
-    <node id="n11">
-      <data key="v_name">806</data>
-      <data key="v_label">SNMPTN</data>
-      <data key="v_count">-2147483648</data>
-      <data key="v_order">-2147483648</data>
-    </node>
-    <node id="n12">
-      <data key="v_name">807</data>
+    <node id="n8">
+      <data key="v_name">512</data>
       <data key="v_label">SPMU</data>
       <data key="v_count">-2147483648</data>
       <data key="v_order">-2147483648</data>
     </node>
-    <node id="n13">
-      <data key="v_name">808</data>
+    <node id="n9">
+      <data key="v_name">513</data>
       <data key="v_label">Teknik Elektro</data>
       <data key="v_count">-2147483648</data>
       <data key="v_order">-2147483648</data>
     </node>
-    <node id="n14">
-      <data key="v_name">809</data>
+    <node id="n10">
+      <data key="v_name">514</data>
       <data key="v_label">Teknik Mesin</data>
       <data key="v_count">-2147483648</data>
       <data key="v_order">-2147483648</data>
     </node>
-    <node id="n15">
-      <data key="v_name">810</data>
+    <node id="n11">
+      <data key="v_name">515</data>
       <data key="v_label">Teknik Sipil</data>
       <data key="v_count">-2147483648</data>
       <data key="v_order">-2147483648</data>
     </node>
-    <node id="n16">
-      <data key="v_name">811</data>
-      <data key="v_label">TP</data>
-      <data key="v_count">-2147483648</data>
-      <data key="v_order">-2147483648</data>
-    </node>
-    <node id="n17">
+    <node id="n12">
       <data key="v_name">assoc1</data>
       <data key="v_label"></data>
-      <data key="v_support">0.0229591836734694</data>
+      <data key="v_support">0.0449897750511247</data>
       <data key="v_confidence">1</data>
-      <data key="v_coverage">0.0229591836734694</data>
-      <data key="v_lift">6.93805309734513</data>
+      <data key="v_coverage">0.0449897750511247</data>
+      <data key="v_lift">1.47289156626506</data>
+      <data key="v_count">22</data>
+      <data key="v_order">5</data>
+    </node>
+    <node id="n13">
+      <data key="v_name">assoc2</data>
+      <data key="v_label"></data>
+      <data key="v_support">0.0388548057259714</data>
+      <data key="v_confidence">1</data>
+      <data key="v_coverage">0.0388548057259714</data>
+      <data key="v_lift">1.44674556213018</data>
+      <data key="v_count">19</data>
+      <data key="v_order">2</data>
+    </node>
+    <node id="n14">
+      <data key="v_name">assoc3</data>
+      <data key="v_label"></data>
+      <data key="v_support">0.049079754601227</data>
+      <data key="v_confidence">1</data>
+      <data key="v_coverage">0.049079754601227</data>
+      <data key="v_lift">1.44674556213018</data>
+      <data key="v_count">24</data>
+      <data key="v_order">3</data>
+    </node>
+    <node id="n15">
+      <data key="v_name">assoc4</data>
+      <data key="v_label"></data>
+      <data key="v_support">0.0593047034764826</data>
+      <data key="v_confidence">1</data>
+      <data key="v_coverage">0.0593047034764826</data>
+      <data key="v_lift">1.44674556213018</data>
+      <data key="v_count">29</data>
+      <data key="v_order">3</data>
+    </node>
+    <node id="n16">
+      <data key="v_name">assoc5</data>
+      <data key="v_label"></data>
+      <data key="v_support">0.0368098159509202</data>
+      <data key="v_confidence">1</data>
+      <data key="v_coverage">0.0368098159509202</data>
+      <data key="v_lift">1.44674556213018</data>
       <data key="v_count">18</data>
       <data key="v_order">3</data>
     </node>
-    <node id="n18">
-      <data key="v_name">assoc2</data>
+    <node id="n17">
+      <data key="v_name">assoc6</data>
       <data key="v_label"></data>
-      <data key="v_support">0.0114795918367347</data>
+      <data key="v_support">0.0572597137014315</data>
       <data key="v_confidence">1</data>
-      <data key="v_coverage">0.0114795918367347</data>
-      <data key="v_lift">5.40689655172414</data>
-      <data key="v_count">9</data>
+      <data key="v_coverage">0.0572597137014315</data>
+      <data key="v_lift">1.44674556213018</data>
+      <data key="v_count">28</data>
+      <data key="v_order">3</data>
+    </node>
+    <node id="n18">
+      <data key="v_name">assoc7</data>
+      <data key="v_label"></data>
+      <data key="v_support">0.0593047034764826</data>
+      <data key="v_confidence">1</data>
+      <data key="v_coverage">0.0593047034764826</data>
+      <data key="v_lift">1.44674556213018</data>
+      <data key="v_count">29</data>
       <data key="v_order">3</data>
     </node>
     <node id="n19">
-      <data key="v_name">assoc3</data>
+      <data key="v_name">assoc8</data>
       <data key="v_label"></data>
-      <data key="v_support">0.0127551020408163</data>
+      <data key="v_support">0.0470347648261759</data>
       <data key="v_confidence">1</data>
-      <data key="v_coverage">0.0127551020408163</data>
-      <data key="v_lift">3.53153153153153</data>
-      <data key="v_count">10</data>
+      <data key="v_coverage">0.0470347648261759</data>
+      <data key="v_lift">1.44674556213018</data>
+      <data key="v_count">23</data>
       <data key="v_order">4</data>
     </node>
     <node id="n20">
-      <data key="v_name">assoc4</data>
+      <data key="v_name">assoc9</data>
       <data key="v_label"></data>
-      <data key="v_support">0.014030612244898</data>
+      <data key="v_support">0.0429447852760736</data>
       <data key="v_confidence">1</data>
-      <data key="v_coverage">0.014030612244898</data>
-      <data key="v_lift">1.95024875621891</data>
-      <data key="v_count">11</data>
+      <data key="v_coverage">0.0429447852760736</data>
+      <data key="v_lift">1.44674556213018</data>
+      <data key="v_count">21</data>
       <data key="v_order">4</data>
     </node>
     <node id="n21">
-      <data key="v_name">assoc5</data>
-      <data key="v_label"></data>
-      <data key="v_support">0.0114795918367347</data>
-      <data key="v_confidence">1</data>
-      <data key="v_coverage">0.0114795918367347</data>
-      <data key="v_lift">1.95024875621891</data>
-      <data key="v_count">9</data>
-      <data key="v_order">4</data>
-    </node>
-    <node id="n22">
-      <data key="v_name">assoc6</data>
-      <data key="v_label"></data>
-      <data key="v_support">0.0191326530612245</data>
-      <data key="v_confidence">1</data>
-      <data key="v_coverage">0.0191326530612245</data>
-      <data key="v_lift">1.95024875621891</data>
-      <data key="v_count">15</data>
-      <data key="v_order">4</data>
-    </node>
-    <node id="n23">
-      <data key="v_name">assoc7</data>
-      <data key="v_label"></data>
-      <data key="v_support">0.024234693877551</data>
-      <data key="v_confidence">1</data>
-      <data key="v_coverage">0.024234693877551</data>
-      <data key="v_lift">1.95024875621891</data>
-      <data key="v_count">19</data>
-      <data key="v_order">5</data>
-    </node>
-    <node id="n24">
-      <data key="v_name">assoc8</data>
-      <data key="v_label"></data>
-      <data key="v_support">0.0127551020408163</data>
-      <data key="v_confidence">1</data>
-      <data key="v_coverage">0.0127551020408163</data>
-      <data key="v_lift">1.41007194244604</data>
-      <data key="v_count">10</data>
-      <data key="v_order">3</data>
-    </node>
-    <node id="n25">
-      <data key="v_name">assoc9</data>
-      <data key="v_label"></data>
-      <data key="v_support">0.0127551020408163</data>
-      <data key="v_confidence">1</data>
-      <data key="v_coverage">0.0127551020408163</data>
-      <data key="v_lift">1.41007194244604</data>
-      <data key="v_count">10</data>
-      <data key="v_order">4</data>
-    </node>
-    <node id="n26">
       <data key="v_name">assoc10</data>
       <data key="v_label"></data>
-      <data key="v_support">0.0114795918367347</data>
+      <data key="v_support">0.0388548057259714</data>
       <data key="v_confidence">1</data>
-      <data key="v_coverage">0.0114795918367347</data>
-      <data key="v_lift">1.41007194244604</data>
-      <data key="v_count">9</data>
-      <data key="v_order">5</data>
+      <data key="v_coverage">0.0388548057259714</data>
+      <data key="v_lift">1.44674556213018</data>
+      <data key="v_count">19</data>
+      <data key="v_order">4</data>
     </node>
-    <edge source="n0" target="n17">
+    <edge source="n1" target="n12">
     </edge>
-    <edge source="n9" target="n17">
+    <edge source="n4" target="n12">
     </edge>
-    <edge source="n6" target="n18">
+    <edge source="n8" target="n12">
     </edge>
-    <edge source="n16" target="n18">
+    <edge source="n11" target="n12">
+    </edge>
+    <edge source="n3" target="n13">
+    </edge>
+    <edge source="n5" target="n14">
+    </edge>
+    <edge source="n9" target="n14">
+    </edge>
+    <edge source="n2" target="n15">
+    </edge>
+    <edge source="n5" target="n15">
+    </edge>
+    <edge source="n0" target="n16">
+    </edge>
+    <edge source="n5" target="n16">
+    </edge>
+    <edge source="n2" target="n17">
+    </edge>
+    <edge source="n10" target="n17">
+    </edge>
+    <edge source="n8" target="n18">
+    </edge>
+    <edge source="n10" target="n18">
     </edge>
     <edge source="n0" target="n19">
     </edge>
-    <edge source="n2" target="n19">
+    <edge source="n7" target="n19">
     </edge>
-    <edge source="n8" target="n19">
+    <edge source="n10" target="n19">
     </edge>
-    <edge source="n8" target="n20">
+    <edge source="n6" target="n20">
     </edge>
-    <edge source="n9" target="n20">
+    <edge source="n7" target="n20">
     </edge>
     <edge source="n10" target="n20">
     </edge>
-    <edge source="n5" target="n21">
+    <edge source="n0" target="n21">
     </edge>
-    <edge source="n9" target="n21">
+    <edge source="n1" target="n21">
     </edge>
-    <edge source="n10" target="n21">
+    <edge source="n8" target="n21">
     </edge>
-    <edge source="n2" target="n22">
+    <edge source="n12" target="n7">
     </edge>
-    <edge source="n8" target="n22">
+    <edge source="n13" target="n4">
     </edge>
-    <edge source="n15" target="n22">
+    <edge source="n14" target="n4">
     </edge>
-    <edge source="n2" target="n23">
+    <edge source="n15" target="n4">
     </edge>
-    <edge source="n10" target="n23">
+    <edge source="n16" target="n4">
     </edge>
-    <edge source="n12" target="n23">
+    <edge source="n17" target="n4">
     </edge>
-    <edge source="n15" target="n23">
+    <edge source="n18" target="n4">
     </edge>
-    <edge source="n9" target="n24">
+    <edge source="n19" target="n4">
     </edge>
-    <edge source="n14" target="n24">
+    <edge source="n20" target="n4">
     </edge>
-    <edge source="n2" target="n25">
-    </edge>
-    <edge source="n4" target="n25">
-    </edge>
-    <edge source="n14" target="n25">
-    </edge>
-    <edge source="n1" target="n26">
-    </edge>
-    <edge source="n4" target="n26">
-    </edge>
-    <edge source="n11" target="n26">
-    </edge>
-    <edge source="n14" target="n26">
-    </edge>
-    <edge source="n17" target="n7">
-    </edge>
-    <edge source="n18" target="n13">
-    </edge>
-    <edge source="n19" target="n5">
-    </edge>
-    <edge source="n20" target="n3">
-    </edge>
-    <edge source="n21" target="n3">
-    </edge>
-    <edge source="n22" target="n3">
-    </edge>
-    <edge source="n23" target="n3">
-    </edge>
-    <edge source="n24" target="n10">
-    </edge>
-    <edge source="n25" target="n10">
-    </edge>
-    <edge source="n26" target="n10">
+    <edge source="n21" target="n4">
     </edge>
   </graph>
 </graphml>

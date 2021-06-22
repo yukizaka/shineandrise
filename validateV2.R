@@ -28,7 +28,7 @@ vald$mhsNpm = as.factor(vald$mhsNpm)
 glimpse(vald)
 summary(vald)
 
-vold <- read.csv('C:/Users/Florecita/Documents/SKRIPSI/fixdataset_nv_edit.csv')
+zvold <- read.csv('C:/Users/Florecita/Documents/SKRIPSI/fixdataset_nv_edit.csv')
 glimpse(vold)
 vold$mhsNpm = as.factor(vold$mhsNpm)
 str(vold$mhsNpm)
