@@ -44,8 +44,9 @@ Pada tahap ini pengumpulan data didapatkan dua data yaitu :
 <p align="justify">Terdapat 2 faktor yang akan dievaluasi dalam penelitian ini, yaitu ukuran generalitas (generality) dan ukuran reliabilitas (reliability) dari association rules yang dihasilkan (Gunadi & Sensuse, 2012)</p>
 
 ### 6. Fase Deployment <br>
-<p align="justify">Tahap deployment pada penelitian ini adalah aplikasi web dengan menggunakan open source package pada R yaitu Shiny.</p>
+<p align="justify">Tahap deployment pada penelitian ini adalah aplikasi web dengan menggunakan open source package pada R yaitu Shiny.</p> 
 
+Berikut ini adalah gambaran dari [hasil deployment](https://github.com/yukizaka/shineandrise/tree/main/documents/hasil%20deployment)
 
 ### Daftar Pustaka
 
