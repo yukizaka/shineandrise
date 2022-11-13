@@ -47,4 +47,8 @@ Pada tahap ini pengumpulan data didapatkan dua data yaitu :
 <p align="justify">Tahap deployment pada penelitian ini adalah aplikasi web dengan menggunakan open source package pada R yaitu Shiny.</p>
 
 
+### Daftar Pustaka
 
+Gunadi, G., & Sensuse, D. I. (2012). Penerapan Metode Data Mining Market Basket Analysis Terhadap Data Penjualan Produk Buku Dengan Menggunakan Algoritma Apriori Dan Frequent Pattern Growth ( Fp-Growth ) : Telematika, 4(1), 118–132.
+
+Larose, D. T. (2005). Discovering Knowledge in Data: An Introduction to Data Mining (Illustrate). John Wiley & Sons.
